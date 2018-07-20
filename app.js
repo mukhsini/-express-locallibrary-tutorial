@@ -7,7 +7,9 @@ var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
-var catalog = require('./routes/catalog'); // Import routes for "catalog" area of site
+var catalog = require('./routes/catalog');
+
+ // Import routes for "catalog" area of site
 var compression = require('compression');
 var helmet = require('helmet');
 
@@ -18,7 +20,7 @@ app.use(helmet());
 
 // Set up mongoose connection
 var mongoose = require('mongoose');
-var dev_db_url = 'mongodb://shukuru:mukhsini01@ds119748.mlab.com:19748/local_library'
+var dev_db_url = 'mongodb://shukuru:mukhsini01@ds119748.mlab.com:19748/salome'
 var mongoDB = process.env.MONGODB_URI || dev_db_url;
 mongoose.connect(mongoDB);
 mongoose.Promise = global.Promise;
